@@ -1,0 +1,7 @@
+<Alloy>
+		<Tab title="tab_one" icon="KS_nav_ui.png">
+			<Window title="Tab 1" class="container">
+				<Button id="open_button">Open Child Window</Button>
+			</Window>
+		</Tab>
+</Alloy>
