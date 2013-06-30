@@ -4,19 +4,19 @@ function Controller() {
     arguments[0] ? arguments[0]["$model"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId1 = Ti.UI.createWindow({
+    $.__views.__alloyId3 = Ti.UI.createWindow({
         backgroundColor: "white",
-        title: "Tab 1",
-        id: "__alloyId1"
+        title: "Tab 2",
+        id: "__alloyId3"
     });
-    $.__views.__alloyId2 = Ti.UI.createLabel({
+    $.__views.__alloyId4 = Ti.UI.createLabel({
         text: "I am Window 2",
-        id: "__alloyId2"
+        id: "__alloyId4"
     });
-    $.__views.__alloyId1.add($.__views.__alloyId2);
+    $.__views.__alloyId3.add($.__views.__alloyId4);
     $.__views.PersonDetails = Ti.UI.createTab({
-        window: $.__views.__alloyId1,
-        title: "Tab 1",
+        window: $.__views.__alloyId3,
+        title: "Tab 2",
         icon: "KS_nav_ui.png",
         id: "PersonDetails"
     });

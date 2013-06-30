@@ -1,7 +1,16 @@
 <Alloy>
 		<Tab title="tab_one" icon="KS_nav_ui.png">
-			<Window title="Tab 1" class="container">
-				<Button id="open_button">Open Child Window</Button>
-			</Window>
+			<Window id="tabWin" title="Tab 1" class="container">
+                <Label>This is the first window</Label>
+                <LeftNavButton>
+                    <View id="view">
+                        <Button id="leftOne" title="leftOne" top="-50dp"></Button>
+                        <Button id="leftTwo" title="leftOne" top="-50dp"></Button>
+                    </View>
+                </LeftNavButton>
+                <RightNavButton>
+                    <Button id="open_button"  style="Ti.UI.iPhone.SystemButtonStyle.EDIT" ></Button>
+                </RightNavButton>
+		</Window>
 		</Tab>
 </Alloy>

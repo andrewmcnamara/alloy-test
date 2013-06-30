@@ -1,3 +1,7 @@
+exports.functionToOpenWin2 = function() {
+    // $.navgroup.open(Alloy.createController('win2').getView());
+    console.log('Booyah');
+}
 $.open_button.addEventListener("click", function(e) {
   console.debug("in open_button click event handler");
 

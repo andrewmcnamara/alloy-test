@@ -4,18 +4,39 @@ function Controller() {
     arguments[0] ? arguments[0]["$model"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId0 = Ti.UI.createWindow({
+    $.__views.tabWin = Ti.UI.createWindow({
         backgroundColor: "white",
-        title: "Tab 1",
+        id: "tabWin",
+        title: "Tab 1"
+    });
+    $.__views.__alloyId0 = Ti.UI.createLabel({
+        text: "This is the first window",
         id: "__alloyId0"
     });
-    $.__views.open_button = Ti.UI.createButton({
-        title: "Open Child Window",
-        id: "open_button"
+    $.__views.tabWin.add($.__views.__alloyId0);
+    $.__views.view = Ti.UI.createView({
+        id: "view"
     });
-    $.__views.__alloyId0.add($.__views.open_button);
+    $.__views.leftOne = Ti.UI.createButton({
+        id: "leftOne",
+        title: "leftOne",
+        top: "-50dp"
+    });
+    $.__views.view.add($.__views.leftOne);
+    $.__views.leftTwo = Ti.UI.createButton({
+        id: "leftTwo",
+        title: "leftOne",
+        top: "-50dp"
+    });
+    $.__views.view.add($.__views.leftTwo);
+    $.__views.tabWin.leftNavButton = $.__views.view;
+    $.__views.open_button = Ti.UI.createButton({
+        id: "open_button",
+        style: Ti.UI.iPhone.SystemButtonStyle.EDIT
+    });
+    $.__views.tabWin.rightNavButton = $.__views.open_button;
     $.__views.Home = Ti.UI.createTab({
-        window: $.__views.__alloyId0,
+        window: $.__views.tabWin,
         title: "tab_one",
         icon: "KS_nav_ui.png",
         id: "Home"
@@ -23,6 +44,9 @@ function Controller() {
     $.__views.Home && $.addTopLevelView($.__views.Home);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    exports.functionToOpenWin2 = function() {
+        console.log("Booyah");
+    };
     $.open_button.addEventListener("click", function() {
         console.debug("in open_button click event handler");
         var childController = Alloy.createController("child");

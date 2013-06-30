@@ -7,16 +7,16 @@ function Controller() {
     $.__views.index = Ti.UI.createTabGroup({
         id: "index"
     });
-    $.__views.__alloyId6 = Alloy.createController("home", {
-        id: "__alloyId6"
-    });
-    $.__views.index.addTab($.__views.__alloyId6.getViewEx({
-        recurse: true
-    }));
-    $.__views.__alloyId8 = Alloy.createController("PersonDetails", {
+    $.__views.__alloyId8 = Alloy.createController("home", {
         id: "__alloyId8"
     });
     $.__views.index.addTab($.__views.__alloyId8.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId10 = Alloy.createController("PersonDetails", {
+        id: "__alloyId10"
+    });
+    $.__views.index.addTab($.__views.__alloyId10.getViewEx({
         recurse: true
     }));
     $.__views.index && $.addTopLevelView($.__views.index);

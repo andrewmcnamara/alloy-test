@@ -1,4 +1,4 @@
-<Alloy>
+	<Alloy>
 	<TabGroup>
     <Require src="home"/>
     <Require src="PersonDetails"/>
